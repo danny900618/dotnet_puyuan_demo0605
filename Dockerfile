@@ -15,7 +15,7 @@ FROM mcr.microsoft.com/dotnet/aspnet:7.0
 WORKDIR /app
 COPY --from=builder /app .
 
-ENV PORT 7202
-EXPOSE 7202
+ENV PORT 5202
+EXPOSE 5202
 
-ENTRYPOINT dotnet $(cat /app/__assemblyname).dll --urls "http://*:7202"
+ENTRYPOINT dotnet $(cat /app/__assemblyname).dll --urls "http://*:5202"
