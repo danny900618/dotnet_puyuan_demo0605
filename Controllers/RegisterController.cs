@@ -34,12 +34,6 @@ namespace PuYuan_net7.Controllers
         [HttpPost]
         public async Task<ActionResult> PostUser(UserViewModel userRegister)
         {
-            var registerFail = new JsonResult(new { status = 1 });
-            if (_context.User == null)
-            {
-                return registerFail;
-            }
-
             var user = new User();
 
             foreach (var propertyInfo in userRegister.GetType().GetProperties())
