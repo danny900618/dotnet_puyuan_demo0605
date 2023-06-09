@@ -15,6 +15,7 @@ using PuYuan_net7.Models;
 using PuYuan_net7.Models;
 using PuYuan_net7.Services;
 using Swashbuckle.AspNetCore.SwaggerGen;
+using Microsoft.Data.SqlClient;
 
 namespace PuYuan_net7.Controllers
 {
