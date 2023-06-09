@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: puyuantoazure0609
+  name: puyuantoazure-2-0609
   labels:
-    app: puyuantoazure0609
-  namespace: namespace-workflow-1686297650444
+    app: puyuantoazure-2-0609
+  namespace: namespace-workflow-1686302024505
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: puyuantoazure0609
+      app: puyuantoazure-2-0609
   template:
     metadata:
       labels:
-        app: puyuantoazure0609
+        app: puyuantoazure-2-0609
     spec:
       containers:
-        - name: puyuantoazure0609
-          image: acrworkflow1686297650444.azurecr.io/image-workflow-1686297650444:latest
+        - name: puyuantoazure-2-0609
+          image: acrworkflow1686302024505.azurecr.io/image-workflow-1686302024505:latest
           ports:
-            - containerPort: 5000
+            - containerPort: 5202
