@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: puyuan7demo0605
-  namespace: namespace-workflow-1685945829635
+  name: puyuantoazure-2-0609
+  namespace: namespace-workflow-1686302024505
 spec:
   type: LoadBalancer
   selector:
-    app: puyuan7demo0605
+    app: puyuantoazure-2-0609
   ports:
     - protocol: TCP
       port: 5202
