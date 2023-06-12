@@ -1,4 +1,4 @@
-name: puyuantoazure-2-0609
+name: puyuanpush0612
 "on":
     push:
         branches:
@@ -6,10 +6,10 @@ name: puyuantoazure-2-0609
     workflow_dispatch: {}
 env:
     ACR_RESOURCE_GROUP: puyuantoazure0609
-    AZURE_CONTAINER_REGISTRY: acrworkflow1686302024505
+    AZURE_CONTAINER_REGISTRY: acrworkflow1686539644575
     CLUSTER_NAME: puyuantoazure0609
     CLUSTER_RESOURCE_GROUP: puyuantoazure0609
-    CONTAINER_NAME: image-workflow-1686302024505
+    CONTAINER_NAME: image-workflow-1686539644575
     DEPLOYMENT_MANIFEST_PATH: |
         manifests/deployment.yaml
         manifests/service.yaml
@@ -62,4 +62,4 @@ jobs:
                 action: deploy
                 images: ${{ env.AZURE_CONTAINER_REGISTRY }}.azurecr.io/${{ env.CONTAINER_NAME }}:${{ github.sha }}
                 manifests: ${{ env.DEPLOYMENT_MANIFEST_PATH }}
-                namespace: namespace-workflow-1686302024505
+                namespace: namespace-workflow-1686539644575

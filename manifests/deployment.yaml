@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: puyuanpush0612
+  labels:
+    app: puyuanpush0612
+  namespace: namespace-workflow-1686539644575
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: puyuanpush0612
+  template:
+    metadata:
+      labels:
+        app: puyuanpush0612
+    spec:
+      containers:
+        - name: puyuanpush0612
+          image: acrworkflow1686539644575.azurecr.io/image-workflow-1686539644575:latest
+          ports:
+            - containerPort: 5202

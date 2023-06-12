@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: puyuanpush0612
+  namespace: namespace-workflow-1686539644575
+spec:
+  type: LoadBalancer
+  selector:
+    app: puyuanpush0612
+  ports:
+    - protocol: TCP
+      port: 5202
+      targetPort: 5202
