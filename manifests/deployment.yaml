@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: puyuanpush0612
+  name: aks-autopush
   labels:
-    app: puyuanpush0612
-  namespace: namespace-workflow-1686539644575
+    app: aks-autopush
+  namespace: namespace-workflow-1686544689833
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: puyuanpush0612
+      app: aks-autopush
   template:
     metadata:
       labels:
-        app: puyuanpush0612
+        app: aks-autopush
     spec:
       containers:
-        - name: puyuanpush0612
-          image: acrworkflow1686539644575.azurecr.io/image-workflow-1686539644575:latest
+        - name: aks-autopush
+          image: acrworkflow1686544689833.azurecr.io/image-workflow-1686544689833:latest
           ports:
-            - containerPort: 5202
+            - containerPort: 7202
